@@ -1,90 +1,46 @@
 # Handwritten-digit-recognition
-This repository contains code for recognizing handwritten digits using various machine learning methods. The dataset used is the USPS dataset.
 
-Dataset
-The dataset used is the USPS dataset, which is stored in the 
-input/usps.h5
- file. The dataset is loaded using the load_usps_dataset function in 
-utils/data_loader.py
- (
-utils/data_loader.py
-).
+This repository provides code for recognizing handwritten digits using a variety of machine learning methods, applied to the USPS dataset.
 
-Methods
-The following methods are implemented for handwritten digit recognition:
+## Dataset
 
-Simple Mean Comparison
-SVD Classification
-HOSVD Classification
-Random Forest
-MLP (Multi-Layer Perceptron)
-CNN (Convolutional Neural Network)
-RNN (Recurrent Neural Network)
-LSTM (Long Short-Term Memory)
-GCN (Graph Convolutional Network)
-Directory Structure
+The project uses the [USPS dataset](https://github.com/Saikikku0803/Handwritten-digit-recognition/tree/main/input/usps.h5), stored in `input/usps.h5`.  
+The dataset is loaded and preprocessed via the `load_usps_dataset` function in [`utils/data_loader.py`](utils/data_loader.py).
 
-config.py
- (
-config.py
-): Configuration file containing dataset paths, image dimensions, training parameters, and random forest parameters.
-digit_images/: Directory to store digit images.
+## Implemented Methods
 
-input/usps.h5
- (
-input/usps.h5
-): USPS dataset file.
+The following methods are available for handwritten digit recognition:
 
-main.py
- (
-main.py
-): Main script to run the different methods for handwritten digit recognition.
-methods/: Directory containing the implementation of various methods.
-cnn_model.py (
-methods/cnn_model.py
-): Implementation of the CNN model.
-gnn_model.py (
-methods/gnn_model.py
-): Implementation of the GCN model.
-hosvd_classification.py (
-methods/hosvd_classification.py
-): Implementation of the HOSVD classification method.
-lstm_method.py (
-methods/lstm_method.py
-): Implementation of the LSTM method.
-mlp_model.py (
-methods/mlp_model.py
-): Implementation of the MLP model.
-random_forest.py (
-methods/random_forest.py
-): Implementation of the Random Forest method.
-rnn_model.py (
-methods/rnn_model.py
-): Implementation of the RNN model.
-simple_mean.py (
-methods/simple_mean.py
-): Implementation of the Simple Mean Comparison method.
-svd_classification.py (
-methods/svd_classification.py
-): Implementation of the SVD classification method.
-utils/: Directory containing utility functions.
-data_loader.py (
-utils/data_loader.py
-): Functions to load and preprocess the dataset.
-metrics.py (
-utils/metrics.py
-): Functions to compute classification metrics.
-visualizer.py (
-utils/visualizer.py
-): Functions to visualize the results.
-Usage
-To run the different methods for handwritten digit recognition, execute the 
-main.py
- script. The script will load the dataset, train the models, and evaluate their performance.
+- Simple Mean Comparison
+- SVD Classification
+- HOSVD Classification
+- Random Forest
+- MLP (Multi-Layer Perceptron)
+- CNN (Convolutional Neural Network)
+- RNN (Recurrent Neural Network)
+- LSTM (Long Short-Term Memory)
+- GCN (Graph Convolutional Network)
 
-python main.py
-Results
-The results of the different methods, including accuracy and confusion matrices, will be saved in the digit_images/ directory.
+## Directory Structure
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+```text
+.
+├── config.py                # Configuration (dataset paths, image size, training params, etc.)
+├── digit_images/            # Output directory for digit images and results
+├── input/
+│   └── usps.h5              # USPS dataset file
+├── main.py                  # Main script to run experiments
+├── methods/
+│   ├── cnn_model.py         # CNN model implementation
+│   ├── gnn_model.py         # GCN model implementation
+│   ├── hosvd_classification.py # HOSVD classification
+│   ├── lstm_method.py       # LSTM method
+│   ├── mlp_model.py         # MLP model
+│   ├── random_forest.py     # Random Forest method
+│   ├── rnn_model.py         # RNN model
+│   ├── simple_mean.py       # Simple Mean Comparison
+│   └── svd_classification.py # SVD classification
+└── utils/
+    ├── data_loader.py       # Dataset loading and preprocessing
+    ├── metrics.py           # Classification metrics
+    └── visualizer.py        # Result visualization

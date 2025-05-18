@@ -45,9 +45,19 @@ The following methods are available for handwritten digit recognition:
     ├── metrics.py           # Classification metrics
     └── visualizer.py        # Result visualization
 ```
+
 ## Usage
 
 To run a handwritten digit recognition experiment with all implemented methods, use:
 
 ```bash
 python main.py
+```
+
+This command will load the USPS dataset, train each model, and evaluate their performance.
+
+## Results
+The results for each method—including accuracy and confusion matrices—will be saved in the `digit_images/ `directory.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.

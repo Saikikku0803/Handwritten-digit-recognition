@@ -44,7 +44,7 @@ The following methods are available for handwritten digit recognition:
     ├── data_loader.py       # Dataset loading and preprocessing
     ├── metrics.py           # Classification metrics
     └── visualizer.py        # Result visualization
-
+```
 ## Usage
 
 To run a handwritten digit recognition experiment with all implemented methods, use:
